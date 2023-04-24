@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+        }
+        input {
+            line-height: 2;
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Реєстрація на сайті Auto.shop</h3>
+    <form action="https://fom.in.ua/echo" target="_blank">
+        <label for="registration_email">Електронна пошта:</label>
+        <br>
+        <input type="text" placeholder="your@email.com" id="registration_email">
+        <br>
+        <label for="registration_password">Пароль:</label>
+        <br>
+        <input type="password" placeholder="Password" id="registration_password">
+        <br>
+        <label for="registration_password_confirm">Підтвердження пароля:</label>
+        <br>
+        <input type="password" placeholder="Cofirm Password" id="registration_password_confirm">
+        <br>
+        <br>
+        <input type="checkbox" id="accept_all_rulles">
+        <label for="accept_all_rulles">Я приймаю умови “Угоди про надання онлайн-сервісів”</label>
+        <p style="font-size:12px">Ваші персональні дані будуть оброблені та захищені згідно до Політики приватності</p>
+        <br>
+        <br>
+        <button type="submit">Accept</button>
+    </form>
+</body>
+</html>

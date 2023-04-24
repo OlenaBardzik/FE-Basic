@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            margin: 4px 0;
+        }
+        input {
+            line-height: 2;
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Авторизація на сайті Auto.shop</h3>
+    <form action="https://fom.in.ua/echo" target="_blank">
+        <label for="auth_email">Електронна пошта:</label>
+        <br>
+        <input type="text" placeholder="your@email.com" id="auth_email">
+        <br>
+        <label for="auth_password">Пароль:</label>
+        <br>
+        <input type="password" placeholder="Password" id="auth_password">
+        <br>
+        <input type="checkbox" id="auth_remember">
+        <label for="auth_remember">Запам'ятати мене</label>
+        <br>
+        <br>
+        <button type="submit">Вхід</button>
+    </form>
+    <button id="auth_facebook" style="width: 200px;">Увійти через Facebook</button>
+    <br>
+    <button id="auth_google" style="width: 200px;">Увійти через Google</button>
+</body>
+</html>

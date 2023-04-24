@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        .vehicle_color {
+            display: inline-block;
+        }
+        .vehicle_color_sample {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+        }
+        section {
+            margin: 6px 0;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Розширенний пошук авто</h3>
+    <form action="https://fom.in.ua/echo" target="_blank">
+        <section>
+            <label for="vehicle_type">Тип кузова:</label>
+            <select name="vehicle_type" id="vehicle_type">
+                <option value="sedan">Седан</option>
+                <option value="hatchback">Хетчбек</option>
+                <option value="crossover">Кросовер</option>
+                <option value="cabrio">Кабріолет</option>
+            </select>
+        </section>
+        <section>   
+            <label for="vehicle_make">Марка авто:</label>
+            <select name="vehicle_make" id="vehicle_make">
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="jaguar">Jaguar</option>
+                <option value="land_rover">Land Rover</option>
+            </select>
+        </section> 
+        <section>
+            <label for="vehicle_country">Країна виробник:</label>
+            <select name="vehicle_country" id="vehicle_country">
+                <option value="germany">Німеччина</option>
+                <option value="japan">Японія</option>
+                <option value="great_britain">Великобританія</option>
+                <option value="usa">США</option>
+            </select>
+        </section>
+        <section>
+            <label for="vehicle_year">Рік:</label>
+            <input type="number" name="vehicle_year_from" id="vehicle_year_from" placeholder="від">
+            <input type="number" name="vehicle_year_to" id="vehicle_year_to" placeholder="до">
+        </section>
+        <section>
+            <label for="vehicle_price">Ціна:</label>
+            <input type="number" name="vehicle_price_from" id="vehicle_price_from" placeholder="від">
+            <input type="number" name="vehicle_price_to" id="vehicle_price_to" placeholder="до">
+            <select name="vehicle_price_currency" id="vehicle_price_currency">
+                <option value="uah">₴</option>
+                <option value="usd">$</option>
+                <option value="eur">€</option>
+            </select>
+        </section>
+        <section>
+            <span>Стан:</span>
+            <br>
+            <label for="vehicle_condition">Участь в ДТП:</label>
+            <select name="vehicle_condition" id="vehicle_condition">
+                <option value="no_accident">НЕ був в ДТП</option>
+                <option value="has_accident">Був в ДТП</option>
+            </select>
+        </section>
+        <section>
+            <label for="vehicle_credit">В кредиті:</label>
+            <select name="vehicle_credit" id="vehicle_credit">
+                <option value="true">показати</option>
+                <option value="false">сховати</option>
+            </select>
+        </section>
+        <section>
+            <label for="vehicle_uncleared">Нерозмитнені:</label>
+            <select name="vehicle_uncleared" id="vehicle_uncleared">
+                <option value="true">показати</option>
+                <option value="false">сховати</option>
+            </select>
+        </section>
+        <section>
+            <label for="vehicle_from_usa">Авто пригнані із США:</label>
+            <select name="vehicle_from_usa" id="vehicle_from_usa">
+                <option value="true">показати</option>
+                <option value="false">сховати</option>
+            </select>
+        </section>
+        <section>
+            <span>Тип палива:</span>
+            <label for="vehicle_fuel_hybrid">Гібрид</label>
+            <input type="checkbox" id="vehicle_fuel_hybrid">
+            <label for="vehicle_fuel_petrol">Бензин</label>
+            <input type="checkbox" id="vehicle_fuel_petrol">
+            <label for="vehicle_fuel_gas">Газ</label>
+            <input type="checkbox" id="vehicle_fuel_gas">
+        </section>
+        <section>
+            <span>Тип коробки передач:</span>
+            <label for="vehicle_transmission_auto">Автомат</label>
+            <input type="checkbox" id="vehicle_transmission_auto">
+            <label for="vehicle_transmission_mechanic">Ручна</label>
+            <input type="checkbox" id="vehicle_transmission_mechanic">
+            <label for="vehicle_transmission_robot">Робот</label>
+            <input type="checkbox" id="vehicle_transmission_robot">
+        </section>
+        <section>
+            <span>Колір:</span>
+            <div class="vehicle_color">
+                <div class="vehicle_color_sample" style="background-color: black;"></div>
+                <label for="vehicle_color_black">Чорний</label>
+                <input id="vehicle_color_black" type="checkbox">
+            </div>
+            <div class="vehicle_color">
+                <div class="vehicle_color_sample" style="background-color: grey;"></div>
+                <label for="vehicle_color_grey">Сірий</label>
+                <input id="vehicle_color_grey" type="checkbox">
+            </div>
+            <div class="vehicle_color">
+                <div class="vehicle_color_sample" style="background-color: white; border: 1px solid black;"></div>
+                <label for="vehicle_color_white">Білий</label>
+                <input id="vehicle_color_white" type="checkbox">
+            </div>
+        </section>
+        <section>
+            <span>Комфорт:</span>
+            <label for="vehicle_comfort_panorama">Панорамний дах</label>
+            <input type="checkbox" id="vehicle_comfort_panorama">
+            <label for="vehicle_comfort_leather">Шкіряний салон</label>
+            <input type="checkbox" id="vehicle_comfort_leather">
+            <label for="vehicle_comfort_seats_heat">Підігрів сидінь</label>
+            <input type="checkbox" id="vehicle_comfort_seats_heat">
+        </section>
+        <button type="submit">Пошук</button>
+    </form>
+</body>
+</html>

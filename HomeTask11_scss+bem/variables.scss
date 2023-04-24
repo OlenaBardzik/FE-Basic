@@ -1,0 +1,10 @@
+$color-primary: #FFF;
+$color-secondary: #E5E5E5;
+$color-accent: #F13C6E;
+$color-contrast: #000;
+$color-sub-contrast: #828282;
+
+@mixin regular-text {
+    font-size: 14px;
+    font-weight: 400;
+}

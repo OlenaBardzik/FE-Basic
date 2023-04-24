@@ -1,0 +1,61 @@
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 4px 8px;
+}
+
+.sample_selectors {
+    text-align: center;
+}
+
+table, section {
+    margin: 30px 40px;
+}
+
+h4 {
+    margin-top: 50px;
+}
+
+samp {
+    color: rgb(67, 156, 95)
+}
+
+.test_color_class {
+    color: rgb(109, 144, 231);
+}
+
+#test_color_id {
+    color: rgb(236, 165, 177);
+}
+
+b, div {
+    color: rgb(128, 22, 128);
+}
+
+div, p {
+    display: inline;
+}
+
+div span {
+    color: rgb(115, 219, 184);
+}
+
+div > p {
+    color: rgb(119, 34, 197);
+}
+
+p + span {
+    color: rgb(250, 213, 4);
+}
+
+a:hover {
+    color: orange;
+}
+
+[type] {
+    color: olivedrab;
+}
+
+article::first-letter {
+    color: orange;
+}

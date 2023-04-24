@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Selectors</title>
+</head>
+<body>
+    <table>
+        <caption>Most popullar selectors</caption>
+        <thead>
+            <tr>
+                <th>Selectors</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="sample_selectors"><code>*</code></td>
+                <td>Обирає всі елементи</td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>p</code></td>
+                <td>Обирає всі елементи <code>&lt;p&gt;</code></td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>.intro</code></td>
+                <td>Вибірка всіх елементів з класом "intro"</td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>#firstname</code></td>
+                <td>Вибирає елемент з ідентифікатором <code>id="firstname"</code></td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>div, p</code></td>
+                <td>Обирає всі елементи <code>&lt;div&gt;</code> і всі елементи <code>&lt;p&gt;</code></td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>div p</code></td>
+                <td>Обирає всі елементи <code>&lt;p&gt;</code> в елементі <code>&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>div > p</code></td>
+                <td>Обирає всі елементи <code>&lt;p&gt;</code> для яких батьківським елементом є елемент <code>&lt;div&gt;</code></td>
+            </tr>
+            <tr>
+                <td class="sample_selectors"><code>div + p</code></td>
+                <td>Обирає елемент <code>&lt;p&gt;</code> який розташовується одразу за елементам <code>&lt;div&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <section>
+        <h4>Samples of implementation:</h4>
+        <ul>
+            <li>
+                <code>samp {color: green}</code>
+                <samp>Стилізація за селектором</samp>
+            </li>
+            <li>
+                <code>.test_color_class {color: blue}</code>
+                <span class="test_color_class">Стилізація за класом</span>
+            </li>
+            <li>
+                <code>#test_color_id {color: pink}</code>
+                <span id="test_color_id">Стилізація за ідентифікатором</span>
+            </li>
+            <li>
+                <code>b, div {color: purple}</code>
+                <b>Стилізація за селекторами</b>
+                <div>Стилізація за селекторами</div>
+            </li>
+            <li>
+                <code>div span {color: aquamarine}</code>
+                <div>
+                    <em><span>Стилізація за вкладеним селектором, нестрога послідовність</span></em>
+                </div>
+            </li>
+            <li>
+                <code>div>p {color: blueviolet}</code>
+                <div>
+                    <p>Стилізація за вкладеним селектором, строга послідовсність</p>
+                </div>
+            </li>
+            <li>
+                <code>p+span {color: gold}</code>
+                <p>Стилізація</p>
+                <span>Стилізація за тегом який йде після визначеного</span>
+            </li>
+            <li>
+                <code>a:hover {color: orange}</code>
+                <a href="https://google.com" target="_blank">Стилізація за псевдокласом, змінює стиль при наведенні</a>
+            </li>
+            <li>
+                <code>[type] {color: olivedrab}</code>
+                <a href="https://google.com" target="_blank" type="text/html">Стилізація за атрибутом</a>
+            </li>
+            <li>
+                <code>article::first-letter {color: orange}</code>
+                <article>Стилізація за псевдо-елементом</article>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

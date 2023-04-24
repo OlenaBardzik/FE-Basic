@@ -1,0 +1,1154 @@
+@import "./variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 32px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn-filled {
+    border: none;
+    color: #FFF;
+    
+    &--mint-saturated {
+        background-color: $color-mint-saturated;
+    }
+
+    &--red {
+        background-color: $color-red;
+    }
+}
+
+.btn-transparent {
+    border: 2px solid;
+    background-color: #FFF;
+
+    &--mint-saturated {
+        border-color: $color-mint-saturated;
+        color: $color-mint-saturated;
+    }
+}
+
+.btn-lg {
+    padding: 16px 32px;
+}
+
+.btn-md {
+    padding: 8px 32px;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+}
+
+header {
+    padding: 20px 75px;
+    background-color: $color-mint-natural;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo > span, b {
+    @include subtitle;
+    font-weight: 400;
+}
+
+.header_logo > b {
+    font-weight: 700;
+}
+
+.header_socialmedia {
+    display: flex;
+}
+.header_socialmedia > li {
+    margin: 0 12px;
+}
+
+
+/* Navigation section*/
+
+.navigation {
+    background-color: $color-mint-pale;
+    padding: 24px 110px;
+    display: flex;
+    justify-content: space-between;
+}
+.navigation > nav {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.navigation a {
+    margin: 12px;
+    color: $color-text-light;
+}
+
+.navigation menu {
+    display: none;
+}
+
+/* Advertising section */
+
+.advertising {
+    background-image: url(./images/healthy_body.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: $color-background-advertising;
+    padding: 72px 0 150px 180px;
+   
+    &__content {
+        width: 490px;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        & > h2 {
+            @include title;
+            font-weight: 500;
+            color: $color-text-secondary;
+        }
+    
+        &  h3 {
+            @include title;
+            font-weight: 700;
+            color: $color-text-secondary;
+        }
+    
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-text-secondary;
+            text-align: center;
+        }
+
+        &__btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    } 
+}
+
+/* Section 'How it works' */
+.steps {
+    padding: 80px 75px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h2 {
+        @include title;
+        font-weight: 500;
+        color: $color-text-light;
+    }
+
+    & h3 {
+        @include subtitle;
+        color: $color-text-secondary;
+        margin-top: 16px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 144px;
+        grid-gap: 32px;
+        margin: 50px 0;
+    }
+}
+
+.step {
+    display: flex;
+
+    &__number {
+        @include title;
+        font-weight: 700;
+        color: $color-mint-saturated;
+        margin-right: 10px;
+    }
+
+    &__content > h4 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        color: $color-text-secondary;
+    }
+
+    &__content h5, p {
+        @include regular-text;
+        color: $color-text-secondary;
+    }
+
+    &__content h5 {
+        margin-bottom: 16px;
+    }
+}
+
+/* Recipes section */
+
+.recipes {
+    background-image: url(./images/background_recipe.jpg);
+    background-size: cover;
+    padding: 30px 74px;
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.recipe {
+    background-color: $color-white;
+    border-radius: 10px;
+    border-bottom: 8px solid $color-mint-saturated;
+    padding: 15px 15px 40px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    & > img {
+        width: 365px;
+        height: 201px;
+        border-radius: 10px;
+    }
+
+    & > h4 {
+        font-weight: 400;
+        @include subtitle;
+        color: $color-text-secondary;
+        margin-top: 20px;
+    }
+
+    & > h5, p {
+        @include regular-text;
+        color: $color-text-secondary;
+    }
+    
+    & > p {
+        margin-top: 16px;
+    }
+}
+
+/* Success story section */
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 74px;
+
+    & img {
+        width: 399px;
+        height: 408px;
+        border-radius: 10px;
+        border: 2px solid $color-mint-saturated;
+    }
+
+    &__contents {
+        width: 60%;
+
+        & > h3 {
+            font-weight: 400;
+            @include title;
+            color: $color-mint-saturated;
+        }
+    
+        & > h4 {
+            font-weight: 400;
+            @include subtitle;
+            color: $color-text-light;
+            margin-top: 24px
+        }
+    
+        & p {
+            @include regular-text;
+            color: $color-text-light;
+            margin-top: 14px;
+        }
+    }
+}
+
+/* Feedback section */
+
+.feedback {
+    margin: 64px 75px;
+    padding: 24px 0;
+    border-top: 3px solid $color-mint-saturated;
+    border-bottom: 3px solid $color-mint-saturated;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        &:last-child {
+            margin-left: 6%;
+        }
+
+        &__card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 45%;
+
+            & > img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__scroll {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 ;
+    }
+}
+
+.card__contents {
+    width: 65%;
+
+    & > p {
+        @include regular-text;
+        color: $color-text-light;
+        margin-bottom: 16px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: $color-text-light;
+    }
+
+    &__result {
+        @include regular-text;
+        color: $color-mint-saturated;
+    }
+}
+
+.feedback-stars {
+    margin-top: 8px;
+
+    & > img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Tools section */
+
+.tools {
+    background-color: $color-mint-pale;
+    padding: 32px 70px 48px;
+    text-align: center;
+
+    & > h3 {
+        font-weight: 400;
+        @include title;
+        color: $color-text-light;
+    }
+
+    & > h4 {
+        width: 60%;
+        font-weight: 400;
+        @include subtitle;
+        color: $color-text-light;
+        margin: 16px auto 36px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &__card {
+            width: 22%;
+            color: $color-text-light;
+
+            & > img {
+                width: 90px;
+                height: 90px;
+            }
+
+            & > h4 {
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 24px;
+                margin: 24px 0 16px;
+            }
+
+            & > p {
+                @include regular-text;
+
+            }
+        }
+    }
+}
+
+/* Price section */
+
+.price {
+    padding: 56px 75px 130px;
+
+    &-table {
+        width: 100%;
+        color: $color-text-light;
+        text-align: center;
+        border-collapse: collapse;
+        
+        & th, td {
+        border: 1px solid $color-pricetable-border;
+        width: 25%;
+        }
+        
+        &__head {
+            height: 96px;
+
+            &__name {
+                @include subtitle;
+                font-weight: 400;
+            }
+
+            &__description {
+                @include regular-text;
+            }
+        }
+        
+        &__legend {
+            @include subtitle;
+            font-weight: 400;
+            line-height: 46px;
+        }
+
+        &__value {
+            font-weight: 300;
+            font-size: 58px;
+            line-height: 84px;
+        }
+        
+        & button {
+            margin: 32px 0;
+        }
+    }
+}
+
+/* FAQ section */
+
+.faq {
+    padding: 0 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-contents {
+        width: 48%;
+        display: flex;
+        justify-content: space-between;
+
+        & > img {
+            width: 64px;
+            height: 64px;
+        }
+
+        &__text {
+            width: 85%;
+            color: $color-text-light;
+            margin-bottom: 72px;
+
+            & > h4 {
+                @include subtitle;
+                font-weight: 400;
+            }
+
+            & > p {
+                @include regular-text
+            }
+        }
+    }
+}
+
+/* Contact us section */
+
+.contact-us {
+    background-image: url(./images/background_contact-us.jpg);
+    background-size: cover;
+    padding: 10% 0 10% 15%;
+
+    &-form {
+        background-color: $color-white;
+        color: $color-text-light;
+        padding: 60px 60px 20px;
+        width: 380px;
+        border-radius: 10px;
+
+        & > h4 {
+            @include subtitle;
+            font-weight: 400;
+            color: $color-mint-saturated;
+        }
+
+        & > h5 {
+            @include regular-text;
+            margin-bottom: 32px;
+        }
+
+        & > p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        & > b {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        & > input {
+            @include regular-text;
+            width: 90%;
+            background-color: #F0E9E9;
+            border: 1px solid #888282;
+            border-radius: 100px;
+            padding: 8px 0 8px 16px;
+            margin: 32px 0 16px;
+        }
+
+        & > span {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 24px;
+            margin-left: 22px;
+        }
+    }
+}
+
+/* Coaches section */
+
+.coache {
+    padding: 72px 180px;
+    color: $color-text-light;
+
+    & > h3 {
+        @include title;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    & h4 {
+        @include subtitle;
+        font-weight: 400;
+        text-align: center;
+        margin: 16px 0 24px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-card {
+        width: 46%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        & > img {
+            border-radius: 50%;
+        }
+
+        &__contents {
+            width: 63%;
+
+            &__name {
+                display: flex;
+                justify-content: space-between;
+
+                & > h5 {
+                    color: $color-mint-saturated;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+
+            &__description {
+
+                & > h5 {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 18px;
+                padding: 8px 0;
+                }
+
+                & > p {
+                    @include regular-text;
+                }
+            }
+        }
+    }
+
+    & .header_socialmedia img {
+        width: 16px;
+        height: 16px;
+    } 
+
+    & .header_socialmedia > li {
+        margin: 0 8px;
+    }
+}
+
+/* Slogan section */
+
+.slogan {
+    background-color: $color-mint-saturated;
+    padding: 80px 0;
+    text-align: center;
+
+    & > span {
+        @include subtitle;
+        font-weight: 700;
+        color: $color-white;
+        margin-right: 16px;
+    }
+
+    & .btn-filled { 
+        border: 2px solid $color-white;
+    }
+}
+
+/* Footer section */
+
+.footer {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        color: $color-text-light;
+        width: 60%;
+    }
+
+    &__text {
+        width: 45%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        
+        & > h4 {
+            padding: 16px 0;
+        }
+
+        & > button {
+            margin-top: 16px;
+        }
+    }
+
+    &__links {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+
+    button {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .btn-lg {
+        padding: 12px 20px;
+    }
+    
+    .btn-md {
+        padding: 6px 16px;
+    }
+    
+    .btn-sm {
+        padding: 6px 12px;
+    }
+
+    .header_logo > span, b {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    header, .navigation {
+        padding: 12px 24px;
+    }
+
+    .navigation > nav {
+        display: none;
+    }
+
+    .navigation menu {
+        display: block;
+    }
+
+    .header_socialmedia img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .header_socialmedia > li {
+        margin: 0 6px;
+    }
+
+    .advertising {
+        padding: 40px 20px;
+       
+        &__content {
+            width: 350px;
+            height: 240px;
+    
+            & > h2, & > h3 {
+                @include title-mobile;
+            }
+        
+            & p {
+                @include regular-text-mobile;
+                color: $color-text-light;
+            }
+            
+            &__btn {
+                margin-top: 10px;
+            }
+        } 
+    }
+
+    .steps {
+        padding: 40px 20px;
+    }
+    
+    .steps > h2 {
+        @include title-mobile;
+    }
+    
+    .steps h3 {
+        @include subtitle-mobile;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .steps__container {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+    
+    .step {
+        display: flex;
+    
+        &__number {
+            @include title-mobile;
+            margin-right: 10px;
+        }
+    
+        &__content > h4 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    
+        &__content h5, p {
+            @include regular-text-mobile;
+        }
+    
+        &__content h5 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .recipes {
+        padding: 30px 20px;
+    
+        &__cards {
+            flex-direction: column;
+        }
+    }
+    
+    .recipe {
+        padding: 15px 15px 30px;
+        width: 90%;
+        margin-bottom: 15px;
+    
+        & > img {
+            width: 316px;
+            height: auto;
+        }
+    
+        & > h4 {
+            font-weight: 400;
+            @include subtitle;
+            color: $color-text-secondary;
+            margin-top: 20px;
+        }
+    
+        & > h5, p {
+            @include regular-text;
+            color: $color-text-secondary;
+        }
+        
+        & > p {
+            margin-top: 16px;
+        }
+    }
+    
+    .story {
+        padding: 20px 20px;
+        flex-direction: column;
+    
+        & img {
+            width: 326px;
+            height: auto;
+            margin-top: 10px;
+        }
+    
+        &__contents {
+            width: 100%;
+    
+            & > h3 {
+                @include title-mobile;
+                text-align: center;
+            }
+        
+            & > h4 {
+                @include subtitle-mobile;
+                margin-top: 12px;
+                text-align: center;
+            }
+        
+            & p {
+                @include regular-text;
+                color: $color-text-light;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    .feedback {
+        margin: 30px 20px;
+        padding: 18px 0;
+    
+        &__container {
+            display: flex;
+            flex-direction: column;
+
+            &:last-child {
+                margin-left: 0%;
+            }
+    
+            &__card {
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+    
+                & > img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    
+        &__scroll {
+            display: none;
+        }
+    }
+    
+    .card__contents {
+        width: 72%;
+        justify-content: space-between;
+    
+        & > p {
+            margin-bottom: 6px;
+        }
+    
+        &__name {
+            line-height: 20px;
+        }
+    }
+    
+    .feedback-stars {
+        margin: 6px 0 15px;
+    
+        & > img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .tools {
+        padding: 30px 20px;
+    
+        & > h3 {
+            @include title-mobile;
+        }
+    
+        & > h4 {
+            width: 100%;
+            @include subtitle-mobile;
+            margin: 8px auto 25px;
+        }
+    
+        &__container {
+            flex-direction: column;
+    
+            &__card {
+                width: 100%;
+                margin-bottom: 25px;
+    
+                & > img {
+                    width: 70px;
+                    height: 70px;
+                }
+    
+                & > h4 {
+                    font-size: 18px;
+                    line-height: 20px;
+                    margin: 10px 0 10px;
+                }
+            }
+        }
+    }
+
+    .price {
+        padding: 30px 20px;
+    
+        &-table {
+            
+            & td {
+                height: 40px;
+            }
+            
+            &__head {
+                height: 32px;
+    
+                &__name {
+                    @include subtitle-mobile;
+                }
+    
+                &__description {
+                    @include regular-text-mobile;
+                }
+            }
+            
+            &__legend {
+                @include regular-text-mobile;
+            }
+    
+            &__value {
+                font-size: 24px;
+                line-height: 30px;
+            }
+            
+            & button {
+                padding: 6px 8px;
+                margin: 15px 6px;
+            }
+        }
+    }
+
+    .faq {
+        padding: 0 20px;
+        flex-direction: column;
+ 
+    
+        &-contents {
+            width: 100%;
+    
+            & > img {
+                width: 40px;
+                height: 40px;
+            }
+    
+            &__text {
+                width: 85%;
+                margin-bottom: 30px;
+    
+                & > h4 {
+                    @include subtitle-mobile;
+                }
+    
+                & > p {
+                    @include regular-text-mobile
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        padding: 6% 0 6% 6%;
+    
+        &-form {
+            padding: 30px 30px;
+            width: 286px;
+    
+            & > h4 {
+                @include subtitle-mobile;
+            }
+    
+            & > h5 {
+                @include regular-text-mobile;
+                margin-bottom: 20px;
+            }
+    
+            & > p, > b {
+                font-size: 12px;
+                line-height: 16px;
+            }
+    
+            & > input {
+                @include regular-text-mobile;
+                width: 90%;
+                padding: 6px 0 6px 10px;
+                margin: 20px 0 14px;
+            }
+    
+            & > span {
+                font-size: 10px;
+                line-height: 11px;
+                width: 50%;
+                display: inline-block;
+            }
+        }
+    }
+
+    .coache {
+        padding: 30px 20px 10px;
+    
+        & > h3 {
+            @include title-mobile;
+        }
+    
+        & h4 {
+            @include subtitle-mobile;
+            margin: 14px 0 20px;
+        }
+    
+        &__container {
+            flex-direction: column;
+        }
+    
+        &-card {
+            width: 100%;
+            margin-bottom: 25px;
+    
+            & > img {
+                width: 70px;
+                height: 70px;
+            }
+    
+            &__contents {
+                width: 75%;
+    
+                &__name > h5 {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+    
+                &__description {
+    
+                    & > h5 {
+                        padding: 6px 0;
+                    }
+    
+                    & > p {
+                        @include regular-text-mobile;
+                    }
+                }
+            }
+        }
+    
+        & .header_socialmedia > li {
+            margin: 0 6px;
+        }
+    }
+
+    .slogan {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 40px 20px;
+    
+        & > span {
+            @include subtitle-mobile;
+            font-weight: 500;
+        }
+    
+        & .btn-filled { 
+            width: 50%;
+            margin-top: 6px;
+        }
+    }
+
+    .footer {
+        padding: 30px 0;
+    
+        &-container {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    
+        &__text {
+            width: 80%;
+            text-align: center;
+            
+            & > h4 {
+                padding: 10px 0;
+            }
+    
+            & > button {
+                margin-top: 14px;
+            }
+        }
+    
+        &__links {
+            width: 90%;
+            justify-content: space-around;
+            font-size: 12px;
+            line-height: 26px;
+            margin-top: 16px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+$breakpoint-mobile: 390px;
+$color-mint-saturated: #38CEA8;
+$color-mint-natural: #EAFEEC;
+$color-mint-pale: #F1FFF8;
+$color-text-light: #20414D;
+$color-text-secondary: #376474;
+$color-red: #F62A2A;
+$color-background-advertising:  #F1F3F2;
+$color-white: #FFF;
+$color-pricetable-border: #6377DD;
+
+@mixin title {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+@mixin title-mobile {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+@mixin subtitle {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin subtitle-mobile {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@mixin regular-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin regular-text-mobile {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
